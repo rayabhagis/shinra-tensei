@@ -1,0 +1,225 @@
+/*Main Wrapper for the project.*/
+#wrapper{
+	margin:0 auto;
+	width:500px;
+}
+
+
+/*Board properties.*/
+boardborder{
+	padding: 40px;
+	background: url('board-border.png');
+	width: 400px !important;
+	background-size: cover;
+	display:block;
+	border-radius: 15px;
+}
+
+board{
+	width:400px;
+	height:400px;
+	background-image:url('board-background.jpg');
+	background-size:cover;
+	position:relative;
+	display:block;
+	border-radius: 25px;
+	opacity: 0.95;
+}
+
+
+/*Center Circle and related elements.*/
+centercircle{
+	width:100px;
+	height:100px;
+	border: 10px double rgba(7, 7, 7, .51);
+	border-radius: 100px;
+	position: relative;
+	top: 142px;
+	left: 142px;
+	display: block;
+}
+
+#realcenter {
+    top: 39px;
+    left: 39px;
+    border: 1px solid rgba(0, 0, 0, 0.58);
+    background-color: rgba(43, 46, 49, 0.89);
+}
+
+
+/*Striker lines and related elements*/
+strikerline {
+width: 260px;
+height: 20px;
+border: 2px solid black;
+border-radius: 25px;
+text-align:center;
+}
+
+#line1 {
+	position: absolute;
+	top: 35px;
+	left: 68px;
+}
+
+#line2 {
+position: absolute;
+bottom: 31px;
+left: 68px;
+}
+
+#line3 {
+position: absolute;
+-webkit-transform: rotate(90deg);
+-webkit-transform-origin: bottom left;
+left: 35px;
+top: 46px;
+}
+
+#line4 {
+position: absolute;
+-webkit-transform: rotate(-90deg);
+-webkit-transform-origin: bottom right;
+right: 31px;
+top: 46px;
+}
+
+#line1 #right, #line2 #right {
+float: right;
+position: relative;
+right: -2px !important;
+left: auto;
+}
+
+#line3 #right, #line4 #right {
+float: right;
+position: relative;
+right: -2px;
+left: auto;
+}
+
+/*Holes*/
+hole{
+	background-color:black;
+	position:absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 25px;
+}
+
+#hole1 {
+top: 0px;
+left: 0px;
+box-shadow: inset 0 0px 4px rgba(0, 0, 0, .5),
+ 			inset 0 0 10px rgba(0, 0, 0, .5),
+ 			0 0 0 1px rgba(0, 0, 0, .1),
+ 			0 -1px 2px 2px rgba(0, 0, 0, .25),
+ 			0 2px 2px 2px rgba(221, 203, 189, .75);
+}
+
+#hole2 {
+top: 0px;
+right: 0px;
+border-bottom-left-radius: 25px;
+box-shadow: inset 0 0px 4px rgba(0, 0, 0, .5),
+ 			inset 0 0 10px rgba(0, 0, 0, .5),
+ 			0 0 0 1px rgba(0, 0, 0, .1),
+ 			0 -1px 2px 2px rgba(0, 0, 0, .25),
+ 			0 2px 2px 2px rgba(221, 203, 189, .75);
+}
+
+#hole3 {
+bottom: 0px;
+left: 0px;
+border-top-right-radius: 25px;
+box-shadow: inset 0 0px 4px rgba(221, 203, 189, .75),
+ 			inset 0 0 10px rgba(0, 0, 0, .5),
+ 			0 0 0 1px rgba(0, 0, 0, .1),
+ 			0 -1px 2px 2px rgba(0, 0, 0, .25), 
+			0 0px 0px 1px rgba(221, 203, 189, .75);
+}
+
+#hole4 {
+bottom: 0px;
+right: 0px;
+border-top-left-radius: 25px;
+box-shadow: inset 0 0px 4px rgba(221, 203, 189, .75),
+ 			inset 0 0 10px rgba(0, 0, 0, .5),
+ 			0 0 0 1px rgba(0, 0, 0, .1),
+ 			0 -1px 0px 2px rgba(0, 0, 0, .25),
+ 			0 0px 0px 1px rgba(221, 203, 189, .75);
+}
+
+/*Lines from holes to center circle*/
+arrow {
+width: 100px;
+height: 1px;
+background-color: black;
+position: absolute;
+}
+
+#arrow1 {
+top: 52px;
+left: 52px;
+-webkit-transform: rotate(45deg);
+-webkit-transform-origin: top left;
+}
+
+#arrow2 {
+top: 52px;
+right: 48px;
+-webkit-transform: rotate(-45deg);
+-webkit-transform-origin: top right;
+}
+
+#arrow3 {
+bottom: 48px;
+left: 52px;
+-webkit-transform: rotate(-45deg);
+-webkit-transform-origin: top left;
+}
+
+#arrow4 {
+bottom: 48px;
+right: 48px;
+-webkit-transform: rotate(45deg);
+-webkit-transform-origin: top right;
+}
+
+/*Style for all the red circles*/
+red {
+width: 20px;
+height: 20px;
+background-color: rgba(255, 0, 0, 0.5);
+position: absolute;
+border-radius: 20px;
+border: 2px solid;
+top: -2px;
+left: -2px;
+}
+
+/*Circle near striker lines.*/
+sidecircle {
+position: absolute;
+width: 40px;
+height: 40px;
+border-radius: 40px;
+border: 1px solid rgba(0, 0, 0, 0.62);
+background: rgba(0,0,0,0.15);
+}
+#circle1 {
+top: 100px;
+left: 100px;
+}
+#circle2 {
+top: 100px;
+right: 96px;
+}
+#circle3 {
+right: 96px;
+bottom: 96px;
+}
+#circle4 {
+bottom: 96px;
+left: 100px;
+}
