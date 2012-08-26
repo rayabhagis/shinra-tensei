@@ -2,28 +2,42 @@
 #wrapper{
 	margin:0 auto;
 	width:500px;
+	font-family:'Courgette', cursive;
+	font-size:24px;
+	line-height:30px;
+	margin-top: 50px;
 }
-
+#support{position:fixed;top:10px;right:10px}
 
 /*Board properties.*/
 boardborder{
 	padding: 40px;
-	background: url('board-border.png');
+	background: url('../images/board-border.png');
 	width: 400px !important;
 	background-size: cover;
 	display:block;
 	border-radius: 15px;
+	-webkit-transition: all 1s ease-in-out; 
+}
+
+boardborder:hover {
+-webkit-transform: scale(1.2);
 }
 
 board{
 	width:400px;
 	height:400px;
-	background-image:url('board-background.jpg');
+	background-image:url('../images/board-background.jpg');
 	background-size:cover;
 	position:relative;
 	display:block;
 	border-radius: 25px;
 	opacity: 0.95;
+	box-shadow: inset 0 0px 4px rgba(0, 0, 0, .5),
+	 			inset 0 0 10px rgba(0, 0, 0, .5),
+	 			0 0 0 1px rgba(0, 0, 0, .1),
+	 			0 -1px 2px 2px rgba(0, 0, 0, .25),
+	 			0 2px 2px 2px rgba(221, 203, 189, .75);
 }
 
 
@@ -54,12 +68,16 @@ height: 20px;
 border: 2px solid black;
 border-radius: 25px;
 text-align:center;
+font-size:0.5em;
+text-indent:30px;
+line-height:20px;
 }
 
 #line1 {
 	position: absolute;
 	top: 35px;
 	left: 68px;
+	-webkit-transform:rotate(180deg);
 }
 
 #line2 {
